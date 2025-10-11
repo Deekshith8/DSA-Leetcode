@@ -18,11 +18,11 @@ public class LowestCommonAncestorOfBST_235 {
 //        TreeNode p = root.right.left ;
 //        TreeNode q = root.right .right ;
 
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
+        TreeNod root = new TreeNod(2);
+        root.left = new TreeNod(1);
 
-        TreeNode p = root;
-        TreeNode q = root.left;
+        TreeNod p = root;
+        TreeNod q = root.left;
 
 
 
@@ -31,7 +31,7 @@ public class LowestCommonAncestorOfBST_235 {
 
     }
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNod lowestCommonAncestor(TreeNod root, TreeNod p, TreeNod q) {
 
         if((root.val <= q.val && root.val >= p.val)||(root.val <= p.val && root.val >= q.val) ){
             return root;

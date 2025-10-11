@@ -6,7 +6,7 @@ public class ValidateBinarySearchTree_98 {
 
     }
 
-    public boolean isValidBST(TreeNode root) {
+    public boolean isValidBST(TreeNod root) {
 
 
         boolean isvalid = helpingMethod(root , Long.MIN_VALUE , Long.MAX_VALUE);
@@ -16,7 +16,7 @@ public class ValidateBinarySearchTree_98 {
         return isvalid;
     }
 
-    public boolean helpingMethod(TreeNode root , Long leftMin , Long rightMax){
+    public boolean helpingMethod(TreeNod root , Long leftMin , Long rightMax){
 
         if(root == null){
             return true;

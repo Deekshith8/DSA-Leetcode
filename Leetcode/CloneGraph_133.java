@@ -9,10 +9,10 @@ public class CloneGraph_133 {
 
     public static void main(String[] args) {
 
-        Node root = new Node(1);
+        Nod root = new Nod(1);
 
-        root.neighbors.add(new Node(2));
-        root.neighbors.add(new Node(4));
+        root.neighbors.add(new Nod(2));
+        root.neighbors.add(new Nod(4));
 
         root.neighbors.get(0).neighbors.add(root);
 
@@ -20,53 +20,53 @@ public class CloneGraph_133 {
 
         CloneGraph_133 obj = new CloneGraph_133();
 
-        Node temp  = obj.cloneGraph(root);
+        Nod temp  = obj.cloneGraph(root);
 
         System.out.println(temp.val);
 
         System.out.println(temp.neighbors);
 
-        for(Node n : temp.neighbors){
+        for(Nod n : temp.neighbors){
             System.out.println(n.val);
         }
 
     }
 
-    public Node cloneGraph(Node node) {
+    public Nod cloneGraph(Nod node) {
 
         if(node == null){
             return  null;
         }
 
-        Queue<Node> queue = new ArrayDeque<>();
+        Queue<Nod> queue = new ArrayDeque<>();
 
-        Map<Node , Node> map = new HashMap<>();
+        Map<Nod , Nod> map = new HashMap<>();
 
         queue.add(node);
 
-        Node root = new Node();
+        Nod root = new Nod();
 
-        Node temp = null;
+        Nod temp = null;
 
         while (!queue.isEmpty()){
 
-            Node realNode = queue.poll();
+            Nod realNode = queue.poll();
 
             if(map.containsKey(realNode)){
                 continue;
             }
 
             if(temp == null){
-                root = new Node(realNode.val);
+                root = new Nod(realNode.val);
                 temp = root;
             }else{
-                temp = new Node(realNode.val);
+                temp = new Nod(realNode.val);
             }
             map.put(realNode , temp);
 
-            for(Node n: realNode.neighbors){
+            for(Nod n: realNode.neighbors){
                 if(map.containsKey(n)){
-                    Node get = map.get(n);
+                    Nod get = map.get(n);
 
                     get.neighbors.add(temp);
                     temp.neighbors.add(get);

@@ -1,29 +1,26 @@
 package Leetcode;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class BinaryTreeMaximumPath_124 {
 
     public static void main(String[] args) {
-//                TreeNode root = new TreeNode(9);
-//        root.left = new TreeNode(6);
-//        root.right = new TreeNode(-3);
+//                TreeNod root = new TreeNod(9);
+//        root.left = new TreeNod(6);
+//        root.right = new TreeNod(-3);
 //
-//        root.right.left = new TreeNode(-6);
-//        root.right.right = new TreeNode(2);
+//        root.right.left = new TreeNod(-6);
+//        root.right.right = new TreeNod(2);
 //
-//        root.right.right.left = new TreeNode(2);
-//        root.right.right.left.left = new TreeNode(-6);
-//        root.right.right.left.right =   new TreeNode(-6);
+//        root.right.right.left = new TreeNod(2);
+//        root.right.right.left.left = new TreeNod(-6);
+//        root.right.right.left.right =   new TreeNod(-6);
 
-//        TreeNode root = new TreeNode(2);
-//        root.left = new TreeNode(9);
-//         root.right = new TreeNode(-1);
+//        TreeNod root = new TreeNod(2);
+//        root.left = new TreeNod(9);
+//         root.right = new TreeNod(-1);
 
-        TreeNode root = new TreeNode(-1);
-           root.left = new TreeNode(2);
-              root.right = new TreeNode(2);
+        TreeNod root = new TreeNod(-1);
+           root.left = new TreeNod(2);
+              root.right = new TreeNod(2);
 
         BinaryTreeMaximumPath_124 obj = new BinaryTreeMaximumPath_124();
 
@@ -31,7 +28,7 @@ public class BinaryTreeMaximumPath_124 {
 
     }
 
-    public int maxPathSum(TreeNode root) {
+    public int maxPathSum(TreeNod root) {
 
         int[]maxPath = new int[1];
         maxPath[0] = Integer.MIN_VALUE;
@@ -51,7 +48,7 @@ public class BinaryTreeMaximumPath_124 {
     }
 
 
-    public int helpingMethod(TreeNode root , int[]maxPath){
+    public int helpingMethod(TreeNod root , int[]maxPath){
 
         if(root == null){
             return 0;

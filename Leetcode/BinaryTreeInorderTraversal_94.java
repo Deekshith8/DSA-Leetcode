@@ -8,22 +8,22 @@ public class BinaryTreeInorderTraversal_94 {
 
         BinaryTreeInorderTraversal_94 obj = new BinaryTreeInorderTraversal_94();
 
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
+        TreeNod root = new TreeNod(1);
+        root.left = new TreeNod(2);
 
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        root.left.left = new TreeNod(4);
+        root.left.right = new TreeNod(5);
 
-        root.right = new TreeNode(3);
+        root.right = new TreeNod(3);
 
-        root.right.right = new TreeNode(8);
-        root.right.right.left = new TreeNode(9);
+        root.right.right = new TreeNod(8);
+        root.right.right.left = new TreeNod(9);
 
         System.out.println(obj.inorderTraversal(root));
 
     }
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNod root) {
 
         List<Integer> results = new LinkedList<>();
 
@@ -32,7 +32,7 @@ public class BinaryTreeInorderTraversal_94 {
     }
 
 
-    public void helpingMethod(List<Integer> list , TreeNode root){
+    public void helpingMethod(List<Integer> list , TreeNod root){
         if(root == null){
             return;
         }
